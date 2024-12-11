@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*
+- Strong cyan: hsl(172, 67%, 45%) 
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("Space_Mono/SpaceMono-Regular.ttf") format("truetype");
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(185, 41%, 84%);
+    font-family: "Space Mono";
+    font-weight: 700;
+    padding-top: 5%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    letter-spacing: 10px;
+    color: hsl(186, 14%, 43%);
+    font-size: 24px;
+}
+
+form{
+    margin-top: 5%;
+    width: 375px;
+    display: grid;
+    gap: 15px;
+    padding: 35px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1.5rem;
+    height: 100vh;
+}
+
+h2{
+    color: hsl(186, 14%, 43%);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.tipLabel{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#tipField{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1rem;
+    padding: 10% 8%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+}
+
+span{
+    text-align: right;
+    font-size: 32px;
+    color: hsl(172, 67%, 45%) ;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    width: 100%;
+    height: 50px;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.input-wrapper input{
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: 24px;
+    width: 80%;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.tip {
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    font-family: "Space Mono";
+    font-size: 24px;
+    color: white;
+    border-radius: 4px;
+    width: 45%;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    font-weight: 700;
+}
+
+#customTip{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    width: 45%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-family: "Space Mono";
+    font-size: 24px;
+    border: none;
+    font-weight: 700;
+}
+  
+      /* Hover effect */
+.tip:hover {
+    background-color: #0056b3;
+}
+  
+      /* Active (clicked and toggled) state */
+.tip.active {
+    background-color: hsl(172, 67%, 45%) ;
+    color: hsl(183, 100%, 15%);
+}
+
+fieldset{
+    border: none;
+}
+
+#reset{
+    margin-top: 15px;
+    width: 125%;
+    font-family: "Space Mono";
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    height: 45px;
+    font-size: 24px;
+}
+
+.whiteTip{
+    color: white;
+}
+
+.greyTip{
+    color: hsl(184, 14%, 56%);
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1000px) {
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 31% 31% 7%;
+        width: 800px;
+        height: 550px;
+    }
+    #billFieldset{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #tipFieldset{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #peopleFieldset{
+        align-self: flex-end;
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #tipField{
+        grid-column: 2;
+        grid-row: 1/4;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 15% 50%;
+        row-gap: 20px;
+    }
+    .attribution{
+        grid-column: 1/-1;
+        grid-row: 4;
+    }
+    .tipLabel{
+        height: 50%;
+        align-self: flex-start;
+    }
+    #reset{
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+}
