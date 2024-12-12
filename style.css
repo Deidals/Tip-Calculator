@@ -168,7 +168,7 @@ fieldset{
 
 #reset{
     margin-top: 15px;
-    width: 125%;
+    width: 100%;
     font-family: "Space Mono";
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
@@ -177,6 +177,7 @@ fieldset{
     font-weight: 700;
     height: 45px;
     font-size: 24px;
+    grid-column: 1/-1;
 }
 
 .whiteTip{
@@ -192,9 +193,9 @@ fieldset{
     form{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 20% 31% 31% 7%;
-        width: 800px;
-        height: 550px;
+        grid-template-rows: 20% 40% 20% 10%;
+        width: 900px;
+        height: 500px;
     }
     #billFieldset{
         grid-column: 1;
@@ -228,5 +229,22 @@ fieldset{
     #reset{
         align-self: flex-end;
         justify-self: flex-end;
+        grid-column: 1/-1;
+    }
+
+    .tip{
+        width: 100%;
+        margin: 0;
+    }
+    #customTip{
+        width: 100%;
+        height: 100%;
+    }
+
+    #tipButton{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
     }
 }

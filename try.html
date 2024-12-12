@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Active Button</title>
+  <style>
+    /* Style for buttons */
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+    /* Active button style */
+    .active {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn" persen="10">Button 1</button>
+  <button class="btn" persen="2">Button 2</button>
+  <button class="btn" persen="3">Button 3</button>
+
+  <script>
+    // Get all buttons
+    const buttons = document.querySelectorAll('.btn');
+    let activeValue = null; // To store the value of the active button
+
+    // Add event listeners to each button
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Remove the 'active' class from all buttons
+        buttons.forEach((btn) => btn.classList.remove('active'));
+
+        // Add the 'active' class to the clicked button
+        button.classList.add('active');
+
+        // Update the active value
+        activeValue = button.getAttribute('persen');
+
+        console.log("Active Value:", activeValue);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -26,19 +26,21 @@
     
     <fieldset id="tipFieldset">
       <legend><h2>Select Tip %</h2></legend>
-      <button type="button" class="tip" id="myButton">5%</button>
-      <button type="button" class="tip">10%</button>
-      <button type="button" class="tip">15%</button>
-      <button type="button" class="tip">25%</button>
-      <button type="button" class="tip">50%</button>
-      <input type="number" name="bill" id="customTip" placeholder="Custom">
+      <div id="tipButton">
+        <button type="button" class="tip" percent="0.05">5%</button>
+        <button type="button" class="tip" percent="0.10">10%</button>
+        <button type="button" class="tip" percent="0.15">15%</button>
+        <button type="button" class="tip" percent="0.25">25%</button>
+        <button type="button" class="tip" percent="0.50">50%</button>
+        <input type="number" name="customTip" id="customTip" placeholder="Custom" min="1" max="100">
+      </div>
     </fieldset>
 
     <fieldset id="peopleFieldset">
       <label for="peopleNumber"><h2>Number of People</h2></label>
       <div class="input-wrapper">
         <span><img src="images/icon-person.svg" alt="Person Icon"></span>
-        <input type="number" name="bill" id="bill" placeholder="0">
+        <input type="number" name="people" id="people" placeholder="0">
       </div>
     </fieldset>
 
@@ -48,14 +50,14 @@
           <label for="tipAmount" class="whiteTip">Tip Amount</label>
           <label for="perPerson" class="greyTip">/ person</label>
         </div>
-          <span>$0</span>
+          <span id="tipAmount">$0.00</span>
         <div class="tipLabel">
           <label for="total" class="whiteTip">Total</label>
           <label for="perPerson" class="greyTip">/ person</label>
         </div>
         </div>
-          <span>$0</span>
-        <div>
+          <span id="totalAmount">$0.00</span>
+        
         <button type="reset" id="reset">RESET</button>
     </fieldset>
       <div class="attribution">
